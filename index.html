@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melbourne Local Food Delivery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav style="background-color: #2A4D9E;">
+        <div class="nav-wrapper navbar-size">
+            <a href="#" class="brand-logo"><img class="user-image-size" src="images/food.jpg"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a target="_blank" href="sass.html">Home</a></li>
+                <li><a target="_blank" href="sass.html">Locations</a></li>
+                <li><a target="_blank" href="badges.html">Categories</a></li>
+                <li><a target="_blank" href="badges.html">Cart</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="main-body">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <h1 id="heading">Welcome to Melbourne Local Food Delivery</h1>
+                    <p class="flow-text">Welcome to Melbourne Local Food Delivery: Bringing the best of Melbourne's culinary delights straight to your doorstep.</p>
+                </div>
+                <div class="col s12" style="display: flex; justify-content: center;">
+                    <img class="materialboxed materialboxed-image" width="250" src="images/FoodDelivery.jpg">
+                </div>
+                <div class="col s12 center-align">
+                    <a class="waves-effect waves-light btn click-me-button modal-trigger" id="clickMeButton" data-target="modal1" style="background-color: #2A4D9E;"><i class="material-icons left">auto_fix_high</i>Add New</a>
+                </div>
+            </div>
+            <div class="row" id="card-section">
+            </div>
+        </div>
+        <div id="modal1" class="modal modal-fixed-footer">
+            <div class="row modal-content">
+                <form class="col s12" method="post" action="/api/foodItems">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input placeholder="title" id="title" name="title" type="text" class="validate">
+                            <label for="name">Title</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="image" type="text" name="image" class="validate">
+                            <label for="image">Image</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="subtitle" type="text" name="subtitle" class="validate">
+                            <label for="subtitle">Sub title</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="description" type="text" name="description" class="validate">
+                            <label for="description">Description</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 center-align">
+                            <button type="submit" class="waves-effect waves-light btn" id="formSubmit" style="background-color: #2A4D9E;">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

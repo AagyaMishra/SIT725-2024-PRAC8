@@ -1,0 +1,13 @@
+.navbar-size {
+    width: 95%;
+    margin: 0 auto;
+}
+.user-image-size {
+    height: 56px;
+    margin: 4px 0;
+}
+
+.click-me-button {
+    background-color: #EE6E73;
+    margin-top: 50px;
+}
